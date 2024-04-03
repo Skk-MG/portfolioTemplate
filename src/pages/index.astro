@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+	<main>
+		<div class="mainInfoContainer">
+			<h1 class="name">name surname</h1>
+			<h2 class="role">programming role</h2>
+		</div>
+	</main>
+
+	<style>
+
+	.mainInfoContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	.name {
+		font-size: 4rem;
+	}
+
+	.role {
+        font-weight: 100;
+        color: rgb(196, 195, 195);
+    }
+
+	main {
+		display: grid;
+		place-items: center;
+	}
+
+	</style>
+</BaseLayout>

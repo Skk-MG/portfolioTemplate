@@ -1,0 +1,36 @@
+---
+import '../styles/global.css'
+import MainComponent from '../components/MainComponent.astro';
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+
+		<main class="menuContactContainer">
+			<MainComponent/>
+			<slot />
+		</main>
+
+	</body>
+
+	<style>
+		.menuContactContainer {
+			display: grid;
+			grid-template-columns: 0.1fr 1fr 3fr;
+			height: 100vh;
+		}
+	</style>
+
+</html>
+

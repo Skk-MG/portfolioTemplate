@@ -1,0 +1,21 @@
+html {
+    background-color: #19191f;
+    color: white;
+    font-family: sans-serif;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
