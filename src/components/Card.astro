@@ -1,77 +1,115 @@
 <div class="card">
 
-    <div class="title">Titulo</div>
-  
-    <div class="icon">
-      <svg enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M468.493,101.637L371.955,5.098H159.57v77.231H43.724v424.769h308.923v-77.231h115.846V101.637z   M371.955,32.401l69.236,69.235h-69.236V32.401z M63.031,487.79V101.637h173.769v96.538h96.538V487.79H63.031z M256.108,109.632  l69.236,69.235h-69.236V109.632z M352.647,410.56V178.867l-96.538-96.538h-77.231V24.406h173.769v96.538h96.538V410.56H352.647z" fill="#37404D"/></svg>
-    </div><!--/icon-->
+    <h1 class="title">Titulo</h1>
+
+    <div class="priceContainer">
+      <h2 class="price">$123</h2>
+      <p class="time">per month</p>
+    </div>
+
+    <div class="buttonContainer">
+      <button class="btn">Free Trial</button>
+    </div>
   
     <div class="features">
       <ul>
+        <li>Lorem ipsum dolor.</li>
         <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor.</li>
       </ul>
-    </div><!--/features-->
-  
-    <a href="#" class="btn">Button</a>
-  
-</div><!--/card-->
+    </div>
+</div>
 
 <style>
-
-.card {
-  background: #1F2124;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  border-radius: 5px;
-  margin: 50px 20px 20px 20px;
-  width: calc(33.3333% - 40px); /* 1/3 minus the margins (20+20) */
-  padding: 20px;
-  text-align: center;
-  color: white;
-  float: left;
   
-  .title {
-    font-size: 25px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(56, 55, 55);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    border: 2px solid rgb(85, 84, 84);
+    margin: 50px 20px 20px 20px;
+    width: calc(45%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    height: fit-content;
   }
 
-  .icon {
-    margin: 50px 0;
-    svg {
-      width: 100px;
-      height: 100px;
-      path {
-        fill: #F6B352;
-      }
-    }
+  .title {
+    font-size: 1rem;
+    font-weight: 100;
+    color: rgb(196, 195, 195);
+    width: min-content;
   }
+
+  .title:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #0EB1D2;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+
+  .card:hover .title:after { 
+    transform: scaleX(1); 
+  }
+
+  .priceContainer {
+    margin: 2rem 0 1.5rem 0;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .time {
+    font-size: 0.8rem;
+    color: rgb(196, 195, 195);
+  }
+
+  .btn {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 14px 18px;
+    color: #dce0e4;
+    box-shadow: inset 0 0 0 2px #dce0e4;
+    background-color: transparent;
+    height: 48px;     
+  }
+
+  .btn:hover{
+    color: #fff;
+    background-color: #616467;
+    box-shadow: inset 0 0 0 2px #0EB1D2;
+  }
+
   .features {
+    margin-top: 1rem;
+    color: rgb(210, 206, 206);
     ul {
       padding: 0;
-      margin: 20px 0 50px 0;
+      margin: 10px 0 10px 0;
       list-style-type: none;
       li {
-        margin: 10px 0;
+        margin: 20px 0;
         font-size: 14px;
       }
     }
   }
-  .btn {
-    display: block;
-    background: #F6B352;
-    color: white;
-    padding: 15px 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: rgba(0,0,0,0.9);
-    transition: all 200ms ease-in-out;
-    text-decoration: none;
-    &:hover {
-      background: #F68657;
-    }
-  }
-}
-
 
 </style>

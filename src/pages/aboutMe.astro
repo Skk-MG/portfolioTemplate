@@ -1,10 +1,47 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Card from "../components/Card.astro"
+import MiniCard from "../components/MiniCard.astro"
 ---
 
 <BaseLayout title="About Me">
     <main>
-        <Card/>
+        <div class="cardContainer">
+            <Card/>
+            <Card/> 
+        </div>
+
+        <div>
+            <h1 class="title">Titulo</h1>
+            <div class="miniCardContainer">
+                <MiniCard/>
+                <MiniCard/>
+                <MiniCard/>
+            </div>
+        </div>
     </main>
+
+    <style>
+        main {
+            display: grid;
+            grid-template-rows: 60% 30%;
+            margin-left: 3rem;
+        }
+
+        .cardContainer {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .miniCardContainer {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .title {
+        font-size: 1.6rem;
+        margin: 0px 0px 0px 20px;
+        }
+
+    </style>
 </BaseLayout>
