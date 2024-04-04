@@ -4,5 +4,75 @@ import Testimonial from "../components/Testimonial.astro";
 ---
 
 <BaseLayout title="Portfolio">
+    <section>
+        <div class="titleBtnContainer">
+            <h1>Testimonials</h1>
+            <div>
+                <button class="btn"><i class="bi bi-arrow-left"></i></button>
+                <button class="btn"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="testimonials">
+            <Testimonial/>
+            <Testimonial/>
+        </div>
+        <div class="titleBtnContainer clients">
+            <h1>Clients</h1>
+            <div>
+                <button class="btn"><i class="bi bi-arrow-left"></i></button>
+                <button class="btn"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="clientsContainer">
+            <img class="avatar" src="../riba1.png" alt="">
+            <img class="avatar" src="../riba2.png" alt="">
+            <img class="avatar" src="../riba3.png" alt="">
+            <img class="avatar" src="../riba4.png" alt="">
+            <img class="avatar" src="../riba5.png" alt="">
+        </div>
+    </section>
 
+    <style>
+        section {
+            margin-top: 3rem;
+        }
+        .titleBtnContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .clients {
+            margin-top: 3rem;
+        }
+
+        .btn {
+            min-width: 80px;    
+        }
+
+        .btn:hover{
+            color: #fff;
+            background-color: #616467;
+        }
+
+        .testimonials {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .clientsContainer {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem;
+            gap: 3rem;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 10%;
+            margin-bottom: 1rem;
+        }
+        
+    </style>
 </BaseLayout>
