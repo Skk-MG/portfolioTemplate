@@ -1,0 +1,75 @@
+<div class="contentContainer blob">
+    <div class="content left">
+        <h2 class="date">2001</h2>
+        <p class="studies">University of something</p>
+    </div>
+</div>
+<div class="contentContainer">
+    <div class="content right">
+        <h2>Title</h2>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo praesentium dolorum vitae recusandae commodi cumque suscipit dolor aliquid.</p>
+    </div>
+</div>
+
+
+<style>
+    .content.left {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .date {
+        color: rgb(196, 195, 195);
+    }
+
+    .studies {
+        color: rgb(136, 135, 135);
+    }
+
+    .content.right {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .text {
+        color: rgb(197, 194, 194);
+        line-height: 1.5;
+    }
+
+    .contentContainer {
+        padding: 2rem;
+        position: relative;
+    }
+
+    .blob::after {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color: #23232a;
+        border: 4px solid #0EB1D2;
+        border-radius: 50%;
+        top: 35px;
+        right: -5px;
+        z-index: 2;
+    }
+
+    .blob::before {
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        background-color: #23232a;
+        border: 5px solid #0f869e6f;
+        border-radius: 50%;
+        right: -8px;
+        z-index: 2;
+    }
+
+</style>

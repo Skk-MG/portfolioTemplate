@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimelineLayout from "../layouts/TimelineLayout.astro";
+import TimelineContainer from "../components/TimelineContainer.astro";
+---
+
+<BaseLayout>
+
+    
+    <section>
+        <h1 class="title">Resume</h1>
+        <h1 class="subtitle">Education</h1>
+        <TimelineLayout>
+            <div class="gridContainer">
+                <TimelineContainer/>
+                <TimelineContainer/>
+                <TimelineContainer/>
+            </div>
+        </TimelineLayout>
+    </section>
+
+    <style>
+
+        .title {
+            font-size: 2rem;
+            padding: 2rem;
+        }
+
+        .subtitle {
+            padding-left: 2rem;
+        }
+        
+        section {
+            display: grid;
+            grid-template-columns: 50%;
+            grid-template-rows: 0.3fr 0.1fr auto;
+        }
+        .gridContainer {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+        }
+    </style>
+
+</BaseLayout>

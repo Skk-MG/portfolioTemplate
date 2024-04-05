@@ -6,11 +6,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<main>
 		<div class="mainInfoContainer">
 			<h1 class="name">name surname</h1>
-			<h2 class="role">programming role</h2>
+			
+			<div class="carousel">
+				<div class="carousel-container">
+				  <div class="slide"><h2 class="role">programming role</h2></div>
+				  <div class="slide"><h2 class="role">another programming role</h2></div>
+				  <div class="slide"><h2 class="role">third programming role</h2></div>
+				</div>
+			  </div>
 		</div>
 	</main>
 
 	<style>
+
+	.carousel {
+		width: 300px;
+		overflow: hidden;
+	}
+
+	.carousel-container {
+		display: flex;
+		transition: transform 0.5s ease;
+	}
+
+	.slide {
+		flex: 0 0 100%;
+		text-align: center;
+	}
+
 
 	.mainInfoContainer {
 		display: flex;
