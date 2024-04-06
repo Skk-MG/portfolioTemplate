@@ -19,6 +19,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	<style>
 
+	.mainInfoContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	.name {
+		font-size: 4rem;
+	}
+
 	.carousel {
 		width: 300px;
 		overflow: hidden;
@@ -32,17 +42,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.slide {
 		flex: 0 0 100%;
 		text-align: center;
-	}
-
-
-	.mainInfoContainer {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1.5rem;
-	}
-	.name {
-		font-size: 4rem;
 	}
 
 	.role {

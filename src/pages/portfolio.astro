@@ -12,7 +12,7 @@ import Testimonial from "../components/Testimonial.astro";
                 <button class="btn"><i class="bi bi-arrow-right"></i></button>
             </div>
         </div>
-        <div class="testimonials">
+        <div class="testimonial">
             <Testimonial/>
             <Testimonial/>
         </div>
@@ -29,10 +29,16 @@ import Testimonial from "../components/Testimonial.astro";
             <img class="avatar" src="../riba3.png" alt="">
             <img class="avatar" src="../riba4.png" alt="">
             <img class="avatar" src="../riba5.png" alt="">
+            <img class="avatar" src="../riba1.png" alt="">
+            <img class="avatar" src="../riba2.png" alt="">
+            <img class="avatar" src="../riba3.png" alt="">
+            <img class="avatar" src="../riba4.png" alt="">
+            <img class="avatar" src="../riba5.png" alt="">
         </div>
     </section>
 
     <style>
+
         section {
             margin-top: 3rem;
         }
@@ -41,6 +47,11 @@ import Testimonial from "../components/Testimonial.astro";
             flex-direction: row;
             justify-content: space-between;
             padding: 1rem;
+        }
+        
+        .testimonial {
+            display: flex;
+            flex-direction: row;
         }
 
         .clients {
@@ -56,16 +67,12 @@ import Testimonial from "../components/Testimonial.astro";
             background-color: #616467;
         }
 
-        .testimonials {
-            display: flex;
-            flex-direction: row;
-        }
-
         .clientsContainer {
             display: flex;
             flex-direction: row;
             padding: 1rem;
             gap: 3rem;
+            overflow: hidden;
         }
 
         .avatar {

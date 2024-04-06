@@ -1,0 +1,38 @@
+---
+import ProgressBar from "./ProgressBar.astro";
+import BarInfoContainer from "./BarInfoContainer.astro";
+---
+
+<div class="progressBarContainer">
+    <h1 class="title">Something Skills</h1>
+    <div>
+        <BarInfoContainer/>
+        <ProgressBar/>
+    </div>
+    <div>
+        <BarInfoContainer/>
+        <ProgressBar/>
+    </div>
+    <div>
+        <BarInfoContainer/>
+        <ProgressBar/>
+    </div>
+    <div>
+        <BarInfoContainer/>
+        <ProgressBar/>
+    </div>
+</div>
+
+<style>
+
+    .progressBarContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title {
+        margin-bottom: 0.5rem;
+    }
+
+</style>

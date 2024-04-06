@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelector('.carousel-container').style.transform = `translateX(${newTransformValue}px)`;
     }
   
-    setInterval(nextSlide, 2000);
+    setInterval(nextSlide, 3000);
   });
   
