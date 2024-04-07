@@ -1,14 +1,15 @@
 ---
+const { img, testimony, name, source } = Astro.props;
 ---
 
 <div class="card">
-    <img class="avatar" src="../RibNugget.png" alt="">
-    <p class="testimony">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit quis dicta enim, maiores quidem id laborum fugiat. Beatae facilis a quam nisi. Blanditiis atque perspiciatis.</p>
+    <img class="avatar" src=`${img}` alt="">
+    <p class="testimony">{testimony}</p>
 
     <div class="extraContainer">
         <div class="idContainer">
-            <h3>name surname</h3>
-            <h4>source</h4>
+            <h3>{name}</h3>
+            <h4>{source}</h4>
         </div>
         <div class="quoteIcon">
             <i class="bi bi-quote"></i>

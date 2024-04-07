@@ -1,24 +1,25 @@
 ---
+const { title, price, time, button, feature, feature2, feature3 } = Astro.props;
 ---
 
 <div class="card">
 
-    <h1 class="title">Titulo</h1>
+    <h1 class="title">{title}</h1>
 
     <div class="priceContainer">
-      <h2 class="price">$123</h2>
-      <p class="time">per month</p>
+      <h2 class="price">${price}</h2>
+      <p class="time">{time}</p>
     </div>
 
     <div class="buttonContainer">
-      <button class="btn">Free Trial</button>
+      <button class="btn">{button}</button>
     </div>
   
     <div class="features">
       <ul>
-        <li>Lorem ipsum dolor.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor.</li>
+        <li>{feature}</li>
+        <li>{feature2}</li>
+        <li>{feature3}</li>
       </ul>
     </div>
 </div>
@@ -29,7 +30,7 @@
     font-size: 1rem;
     font-weight: 100;
     color: rgb(196, 195, 195);
-    width: min-content;
+    width: max-content;
   }
 
   .title:after {

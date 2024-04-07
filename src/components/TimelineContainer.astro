@@ -1,13 +1,17 @@
+---
+const { date, studies, title, text } = Astro.props;
+---
+
 <div class="contentContainer blob">
     <div class="content left">
-        <h2 class="date">2001</h2>
-        <p class="studies">University of something</p>
+        <h2 class="date">{date}</h2>
+        <p class="studies">{studies}</p>
     </div>
 </div>
 <div class="contentContainer">
     <div class="content right">
-        <h2>Title</h2>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo praesentium dolorum vitae recusandae commodi cumque suscipit dolor aliquid.</p>
+        <h2>{title}</h2>
+        <p class="text">{text}</p>
     </div>
 </div>
 

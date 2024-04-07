@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimelineLayout from "../layouts/TimelineLayout.astro";
 import TimelineContainer from "../components/TimelineContainer.astro";
 import ProgressBarContainer from "../components/ProgressBarContainer.astro";
+import ProgressBarContainerTwo from "../components/ProgressBarContainerTwo.astro";
 import TagContainer from "../components/TagContainer.astro";
 ---
 
@@ -14,16 +15,16 @@ import TagContainer from "../components/TagContainer.astro";
             <h1 class="subtitle">Education</h1>
             <TimelineLayout>
                 <div class="timelineContainer">
-                    <TimelineContainer/>
-                    <TimelineContainer/>
-                    <TimelineContainer/>
-                    <TimelineContainer/>
+                    <TimelineContainer date="2001" studies="University of something" title="Title 1" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo praesentium dolorum vitae recusandae commodi cumque suscipit dolor aliquid."/>
+                    <TimelineContainer date="2002" studies="School of something" title="Title 2" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo praesentium dolorum vitae recusandae commodi cumque suscipit dolor aliquid."/>
+                    <TimelineContainer date="2003" studies="College of something" title="Title 3" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo praesentium dolorum vitae recusandae commodi cumque suscipit dolor aliquid."/>
+                    <TimelineContainer date="2004" studies="University of stuff" title="Title 4" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo praesentium dolorum vitae recusandae commodi cumque suscipit dolor aliquid."/>
                 </div>
             </TimelineLayout>
         </div>
         <div class="progressBarsContainer">
-            <ProgressBarContainer/>
-            <ProgressBarContainer/>
+            <ProgressBarContainer title="Skills at something"/>
+            <ProgressBarContainerTwo title="Skills at something 2"/>
             <TagContainer/>
         </div>
     </section>

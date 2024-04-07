@@ -1,19 +1,15 @@
 ---
+const { bootstrapIcon, title, number} = Astro.props;
 ---
 
 <div class="card">
-    <p class="icon"><i class="bi bi-heart"></i></p>
-    <h2 class="secondTitle">Happy Clients</h2>
-    <p class="numbers">578</p>
+    <p class="icon"><i class=`${bootstrapIcon}`></i></p>
+    <h2 class="title">{title}</h2>
+    <p class="numbers">{number}</p>
 </div>
 
 <style>
 
-  .title {
-      font-size: 1.6rem;
-      margin: 0px 0px 0px 20px;
-  }
-    
   .card {
     gap: 1.2rem;
     margin: 20px 20px 20px 20px;
@@ -26,7 +22,7 @@
     font-size: 2rem;
   }
 
-  .secondTitle {
+  .title {
     font-size: 1.2rem;
   }
 

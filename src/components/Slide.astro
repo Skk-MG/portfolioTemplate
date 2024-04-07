@@ -1,0 +1,13 @@
+---
+const { img } = Astro.props;
+---
+
+<div class="slide">
+    <img class="avatar" src=`${img}` height="200" width="250" alt="">
+</div>
+
+<style>
+    .avatar {
+        border-radius: 50%;
+    }
+</style>

@@ -7,16 +7,16 @@ import MiniCard from "../components/MiniCard.astro"
 <BaseLayout title="About Me">
     <main>
         <div class="cardContainer">
-            <Card/>
-            <Card/> 
+            <Card title="Title" price="123" time="per month" button="Free Trial" feature="Lorem ipsum dolor." feature2="Lorem ipsum dolor sit amet." feature3="Lorem ipsum dolor."/>
+            <Card title="Title 2" price="321" time="every two months" button="2 Month Trial" feature="Lorem ipsum dolor." feature2="Lorem ipsum dolor sit amet." feature3="Lorem ipsum dolor."/> 
         </div>
 
         <div>
             <h1 class="title">Titulo</h1>
             <div class="miniCardContainer">
-                <MiniCard/>
-                <MiniCard/>
-                <MiniCard/>
+                <MiniCard bootstrapIcon="bi bi-heart" title="Happy Clients" number="495"/>
+                <MiniCard bootstrapIcon="bi bi-star" title="Working Hours" number="1111"/>
+                <MiniCard bootstrapIcon="bi bi-clock"  title="Awards" number="23"/>
             </div>
         </div>
     </main>
@@ -39,8 +39,8 @@ import MiniCard from "../components/MiniCard.astro"
         }
 
         .title {
-        font-size: 1.6rem;
-        margin: 0px 0px 0px 20px;
+            font-size: 1.6rem;
+            margin: 0px 0px 0px 20px;
         }
 
     </style>

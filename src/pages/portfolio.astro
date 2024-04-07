@@ -1,57 +1,41 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Testimonial from "../components/Testimonial.astro";
+import Slide from "../components/Slide.astro";
+import TestimonialContainer from "../components/TestimonialContainer.astro";
 ---
 
 <BaseLayout title="Portfolio">
     <section>
-        <div class="titleBtnContainer">
+        <div class="title">
             <h1>Testimonials</h1>
-            <div>
-                <button class="btn"><i class="bi bi-arrow-left"></i></button>
-                <button class="btn"><i class="bi bi-arrow-right"></i></button>
-            </div>
         </div>
-        <div class="testimonial">
-            <Testimonial/>
-            <Testimonial/>
-        </div>
-        <div class="titleBtnContainer clients">
+
+        <TestimonialContainer/>
+
+        <div class="title clients">
             <h1>Clients</h1>
-            <div>
-                <button class="btn"><i class="bi bi-arrow-left"></i></button>
-                <button class="btn"><i class="bi bi-arrow-right"></i></button>
-            </div>
         </div>
-        <div class="clientsContainer">
-            <img class="avatar" src="../riba1.png" alt="">
-            <img class="avatar" src="../riba2.png" alt="">
-            <img class="avatar" src="../riba3.png" alt="">
-            <img class="avatar" src="../riba4.png" alt="">
-            <img class="avatar" src="../riba5.png" alt="">
-            <img class="avatar" src="../riba1.png" alt="">
-            <img class="avatar" src="../riba2.png" alt="">
-            <img class="avatar" src="../riba3.png" alt="">
-            <img class="avatar" src="../riba4.png" alt="">
-            <img class="avatar" src="../riba5.png" alt="">
+        <div class="slider">
+            <div class="slide-track">
+                <Slide img="../riba1.png"/>
+                <Slide img="../riba2.png"/>
+                <Slide img="../riba3.png"/>
+                <Slide img="../riba4.png"/>
+                <Slide img="../riba5.png"/>
+                <Slide img="../RibNugget.png"/>
+                <Slide img="../franurib.png"/>
+                <Slide img="../riba1.png"/>
+            </div>
         </div>
     </section>
 
     <style>
-
         section {
             margin-top: 3rem;
         }
-        .titleBtnContainer {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+
+        .title {
             padding: 1rem;
-        }
-        
-        .testimonial {
-            display: flex;
-            flex-direction: row;
         }
 
         .clients {
@@ -67,19 +51,47 @@ import Testimonial from "../components/Testimonial.astro";
             background-color: #616467;
         }
 
-        .clientsContainer {
-            display: flex;
-            flex-direction: row;
-            padding: 1rem;
-            gap: 3rem;
-            overflow: hidden;
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 7));
+            }
         }
 
-        .avatar {
-            border-radius: 50%;
-            width: 10%;
-            margin-bottom: 1rem;
+        .slider {
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 1200px;
         }
-        
+        .slider::before, .slider::after {
+            background: linear-gradient(to right, #23232a, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 200px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+        .slider .slide-track {
+            animation: scroll 60s linear infinite;
+            display: flex;
+            gap: 3rem;
+            width: calc(250px * 14);
+        }
+        .slider .slide {
+            height: 100px;
+            width: 250px;
+        }
     </style>
 </BaseLayout>

@@ -1,8 +1,9 @@
 ---
+const { width } = Astro.props;
 ---
 
-<div class="orange meter">
-    <span style="width: 50%"></span>
+<div class="lightBlue meter">
+    <span style=`${width}`></span>
 </div>
 
 <style>
@@ -35,7 +36,7 @@
         overflow: hidden;
     }
 
-    .orange > span {
+    .lightBlue > span {
         /* background-color: #0EB1D2; */
         background-image: linear-gradient(to bottom, #0EB1D2, #096d81);
     }

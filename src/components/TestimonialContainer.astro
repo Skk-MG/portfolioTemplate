@@ -1,0 +1,40 @@
+---
+import Testimonial from "./Testimonial.astro";
+---
+
+<div class="slider">
+  <div class="slide-track">
+      <Testimonial img="../RibNugget.png" testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit quis dicta enim, maiores quidem id laborum fugiat. Beatae facilis a quam nisi. Blanditiis atque perspiciatis." name="name surname" source="source"/>
+      <Testimonial img="../riba1.png" testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit quis dicta enim, maiores quidem id laborum fugiat. Beatae facilis a quam nisi. Blanditiis atque perspiciatis." name="name surname" source="source"/>
+      <Testimonial img="../riba2.png" testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit quis dicta enim, maiores quidem id laborum fugiat. Beatae facilis a quam nisi. Blanditiis atque perspiciatis." name="name surname" source="source"/>
+      <Testimonial img="../riba3.png" testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit quis dicta enim, maiores quidem id laborum fugiat. Beatae facilis a quam nisi. Blanditiis atque perspiciatis." name="name surname" source="source"/>
+      <Testimonial img="../riba4.png" testimony="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit quis dicta enim, maiores quidem id laborum fugiat. Beatae facilis a quam nisi. Blanditiis atque perspiciatis." name="name surname" source="source"/>
+  </div>
+</div>
+
+<style>
+    .slider {
+        box-shadow: 0 10px 20px -5px rgba(14, 177, 210, 0.125);
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 1200px;
+        border-radius: 5rem;
+    }
+
+    .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
+    .slider .slide-track {
+        animation: scroll 90s linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+    }
+
+</style>

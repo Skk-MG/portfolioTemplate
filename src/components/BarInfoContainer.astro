@@ -1,9 +1,10 @@
 ---
+const { skill, percentage } = Astro.props;
 ---
 
 <div class="barInfoContainer">
-    <h3>Skill #1</h3>
-    <h4 class="percentage">50%</h4>
+    <h3>{skill}</h3>
+    <h4 class="percentage">{percentage}</h4>
 </div>
 
 <style>
