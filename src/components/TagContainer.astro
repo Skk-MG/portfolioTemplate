@@ -3,7 +3,7 @@ import Tag from "./Tag.astro";
 ---
 
 <div>
-    <h1>Knowledges</h1>
+    <h1 class="title">Knowledges</h1>
     <div class="tagContainer">
         <Tag knowledge="Knowledge 1"/>
         <Tag knowledge="Knowledge 2"/>
@@ -29,7 +29,8 @@ import Tag from "./Tag.astro";
         gap: 0.5rem;
     }
 
-    h1 {
+    .title {
         margin-bottom: 1.5rem;
+        color: var(--color-title);
     }
 </style>

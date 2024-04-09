@@ -3,7 +3,7 @@ const { skill, percentage } = Astro.props;
 ---
 
 <div class="barInfoContainer">
-    <h3>{skill}</h3>
+    <h3 class="skill">{skill}</h3>
     <h4 class="percentage">{percentage}</h4>
 </div>
 
@@ -14,8 +14,12 @@ const { skill, percentage } = Astro.props;
         justify-content: space-between;
     }
 
+    .skill {
+        color: var(--color-title);
+    }
+
     .percentage {
-        color: rgb(196, 195, 195);
+        color: var(--color-text);
         font-weight: 100;
         font-size: 0.9rem;
     }

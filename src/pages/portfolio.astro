@@ -36,6 +36,7 @@ import TestimonialContainer from "../components/TestimonialContainer.astro";
 
         .title {
             padding: 1rem;
+            color: var(--color-title);
         }
 
         .clients {
@@ -67,7 +68,7 @@ import TestimonialContainer from "../components/TestimonialContainer.astro";
             width: 1200px;
         }
         .slider::before, .slider::after {
-            background: linear-gradient(to right, #23232a, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(to right, var(--color-bg), rgba(255, 255, 255, 0) 100%);
             content: "";
             height: 200px;
             position: absolute;

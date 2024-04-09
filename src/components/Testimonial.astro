@@ -8,8 +8,8 @@ const { img, testimony, name, source } = Astro.props;
 
     <div class="extraContainer">
         <div class="idContainer">
-            <h3>{name}</h3>
-            <h4>{source}</h4>
+            <h3 class="name">{name}</h3>
+            <h4 class="source">{source}</h4>
         </div>
         <div class="quoteIcon">
             <i class="bi bi-quote"></i>
@@ -24,13 +24,14 @@ const { img, testimony, name, source } = Astro.props;
         width: 15%;
         margin-top: -50px;
         margin-bottom: 1rem;
+        border: 3px solid var(--color-line);
     }
 
     .testimony {
         font-style: italic;
         line-height: 1.5;
         text-align: left;
-
+        color: var(--color-text);
     }
 
     .extraContainer {
@@ -46,10 +47,14 @@ const { img, testimony, name, source } = Astro.props;
         text-align: left;
     }
 
-    h4 {
+    .name {
+        color: var(--color-title);
+    }
+
+    .source {
         margin-top: 0.5rem;
         font-weight: 100;
-        color: rgb(196, 195, 195);
+        color: var(--color-text);
     }
 
     .card {
@@ -57,7 +62,7 @@ const { img, testimony, name, source } = Astro.props;
     }
 
     .quoteIcon {
-        color: #0a839b;
+        color: var(--color-decoration);
         font-size: 3rem;
         transform: rotate(180deg);
     }
