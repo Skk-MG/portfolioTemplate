@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("astro:page-load", () => {
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelector('.carousel-container').style.transform = `translateX(${newTransformValue}px)`;
     }
   
-    setInterval(nextSlide, 3000);
-  });
+    setInterval(nextSlide, 2000);
+});
   
