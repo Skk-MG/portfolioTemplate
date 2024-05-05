@@ -1,13 +1,17 @@
 ---
-const { img } = Astro.props;
+const { img, first } = Astro.props;
 ---
 
-<div class="slide">
-    <img class="avatar" src=`${img}` height="250" width="250" alt="">
+<div class=`slide ${first}`>
+    <img class="avatar" src=`${img}` height="250" width="250" alt="brand logo">
 </div>
 
 <style>
     .avatar {
         border-radius: 50%;
+    }
+
+    .first {
+        margin-left: 10rem;
     }
 </style>
