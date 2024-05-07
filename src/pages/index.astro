@@ -46,12 +46,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 		.role {
 			font-weight: 100;
-			color: var(--color-text);
+			color: var(--color-text-source);
 		}
 
 		main {
 			display: grid;
 			place-items: center;
+		}
+
+		@media (max-width: 767px) {
+
+			.name {
+				font-size: 3rem;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.name {
+				font-size: 2rem;
+			}
+
+			.slide {
+				font-size: 0.9rem;
+			}
+		}
+
+		@media (max-width: 320px) {
+			.carousel {
+				width: 200px	;
+			}
+
+			.name {
+				font-size: 1.5rem;
+			}
+
+			.role {
+				font-size: 1.2rem;
+				text-align: center;
+			}
+
 		}
 	</style>
 </BaseLayout>

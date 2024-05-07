@@ -18,7 +18,7 @@ import Testimonial from "./Testimonial.astro";
         margin: auto;
         overflow: hidden;
         position: relative;
-        width: 1200px;
+        width: 1300px;
         border-radius: 5rem;
     }
 
@@ -32,9 +32,28 @@ import Testimonial from "./Testimonial.astro";
         top: 0;
     }
     .slider .slide-track {
-        animation: scroll 90s linear infinite;
+        animation: scroll 5s linear infinite;
         display: flex;
-        width: calc(250px * 14);
+        width: calc(250px * 12);
+    }
+
+    @media (max-width: 576px) {
+
+    }
+
+    @media (max-width: 767px) {
+
+    }
+
+    @media (max-width: 991px) {
+
+    }
+
+    @media (max-width: 1200px) {
+
+        .slider {
+            width: 800px;
+        }
     }
 
 </style>

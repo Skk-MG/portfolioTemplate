@@ -1,40 +1,49 @@
 ---
+import LightModeSwitch from "./LightModeSwitch.astro";
 ---
 
-<div class="menuContainer">
-    <a href="/" class="menuLink">
-        <div class="menuItem">
-                <h1 class="icon"><i class="bi bi-house-door"></i></h1>
-                <h1 class="text">Home</h1>
-        </div>
-    </a>
+<div class="menuContainer" >
+    <button class="openMenu" id="abrir"><i class="bi bi-list"></i></button>
+    <div class="menuList" id="nav">
+        <button class="closeMenu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+        <a href="/" class="menuLink">
+            <div class="menuItem">
+                    <h1 class="icon"><i class="bi bi-house-door"></i></h1>
+                    <h1 class="text">Home</h1>
+            </div>
+        </a>
+    
+        <a href="/aboutMe" class="menuLink">
+            <div class="menuItem">
+                <h1 class="icon"><i class="bi bi-person"></i></h1>
+                <h1 class="text abMe">About Me</h1>
+            </div>
+        </a>
+    
+        <a href="/resume" class="menuLink">
+            <div class="menuItem">
+                <h1 class="icon"><i class="bi bi-mortarboard"></i></h1>
+                <h1 class="text">Resume</h1>
+            </div>
+        </a>
+    
+        <a href="/portfolio" class="menuLink">
+            <div class="menuItem">
+                <h1 class="icon"><i class="bi bi-briefcase"></i></h1>
+                <h1 class="text">Portfolio</h1>
+            </div>
+        </a>
 
-    <a href="/aboutMe" class="menuLink">
-        <div class="menuItem">
-            <h1 class="icon"><i class="bi bi-person"></i></h1>
-            <h1 class="text abMe">About Me</h1>
+        <div class="switchContainer">
+            <LightModeSwitch/>
         </div>
-    </a>
-
-    <a href="/resume" class="menuLink">
-        <div class="menuItem">
-            <h1 class="icon"><i class="bi bi-mortarboard"></i></h1>
-            <h1 class="text">Resume</h1>
-        </div>
-    </a>
-
-    <a href="/portfolio" class="menuLink">
-        <div class="menuItem">
-            <h1 class="icon"><i class="bi bi-briefcase"></i></h1>
-            <h1 class="text">Portfolio</h1>
-        </div>
-    </a>
+    </div>
 </div>
 
 <style>
 
     a {
-        color: var(--color-text);
+        color: var(--color-text-source);
     }
 
     .text {
@@ -65,4 +74,105 @@
         color: var(--color-menu);
     }
 
+    .openMenu,
+    .closeMenu {
+        display: none;
+    }
+
+    .switchContainer {
+        padding: 1rem;
+    }
+
+    @media (max-width: 991px) {
+
+        .icon {
+            font-size: 1.8rem;
+        }
+        
+        .text {
+            font-size: 0.9rem;
+        }
+
+        .abMe {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .menuContainer {
+            position: absolute;
+            bottom: 0;
+            right: 8rem;
+        }
+
+        .menuList {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .menuItem {
+            border: 1px solid var(--color-line)
+        }
+
+    }
+    
+    @media (max-width: 576px) {
+
+        .menuContainer {
+            right: 1rem;
+        }
+
+        .switchContainer {
+            padding-right: 0;
+        }
+    }
+
+    @media (max-width: 320px) {
+
+        .openMenu,
+        .closeMenu {
+            display: block;
+            color: var(--color-decoration);
+            border: 0;
+            font-size: 1.25rem;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .menuContainer {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .menuList {
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+            border-bottom-left-radius: 1rem;
+        }
+
+        .openMenu.invisible {
+            display: none;
+        }
+
+        .menuList.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menuList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .switchContainer {
+            padding: 1rem;
+        }
+
+        .menuItem {
+            border: 1px solid var(--color-line)
+        }
+    }
 </style>

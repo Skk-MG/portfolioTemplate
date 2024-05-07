@@ -1,11 +1,11 @@
 ---
-const { bootstrapIcon, title, number} = Astro.props;
+const { bootstrapIcon, title, number, awards} = Astro.props;
 ---
 
 <div class="card">
     <p class="icon"><i class=`${bootstrapIcon}`></i></p>
     <h2 class="title">{title}</h2>
-    <p class="numbers">{number}</p>
+    <p class=`numbers ${awards}`>{number}</p>
 </div>
 
 <style>
@@ -31,6 +31,34 @@ const { bootstrapIcon, title, number} = Astro.props;
     font-size: 2rem;
     color: var(--color-text);
     letter-spacing: 1px;
+  }
+
+  @media (max-width: 1200px) {
+    .card {
+      height: 150px;
+    }
+
+    .awards {
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .card {
+      height: 150px;
+    }
+
+    .awards {
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+
+  }
+
+  @media (max-width: 576px) {
+
   }
 
 </style>

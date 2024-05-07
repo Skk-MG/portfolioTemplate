@@ -3,7 +3,7 @@ const { img, first } = Astro.props;
 ---
 
 <div class=`slide ${first}`>
-    <img class="avatar" src=`${img}` height="250" width="250" alt="brand logo">
+    <img class="avatar" src=`${img}` alt="brand logo">
 </div>
 
 <style>
@@ -13,5 +13,27 @@ const { img, first } = Astro.props;
 
     .first {
         margin-left: 10rem;
+    }
+
+    img {
+        width: 250px;
+    }
+
+    @media (max-width: 576px) {
+
+    }
+
+    @media (max-width: 767px) {
+
+    }
+
+    @media (max-width: 991px) {
+
+    }
+
+    @media (max-width: 1200px) {
+        img {
+            width: 200px;
+        }
     }
 </style>
